@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link href="../static/css/bootstrap.css">
+</head>
+<button id="btn">开始运动</button>
+<button id="reset">还原</button>
+<div id="test" style="height:100px;width:100px;background:pink;position:absolute;left:0;"></div>
+<script src="/static/js/jquery-3.3.1.js"></script>
+<script src="/static/js/velocity.min.js"></script>
+<script>
+$("#reset").click(function(){
+  history.go();
+})
+var OnOff = false;
+$("#btn").click(function(){
+  if(OnOff = !OnOff){
+    $("#test").velocity("slideUp");
+  }else{
+    $("#test").velocity("slideDown");
+  }
+})
+</script>
+</body>
+</html>
